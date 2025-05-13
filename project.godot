@@ -12,9 +12,9 @@ config_version=5
 
 config/name="Solo Jumper"
 run/main_scene="res://scenes/game.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.0156863, 0.0470588, 0.160784, 1)
-boot_splash/image="uid://d0e1rrnfi5uny"
+boot_splash/image="res://assets/sprites/loading_android.png"
 config/icon="res://Android Icon/mipmap-xxxhdpi/ic_launcher.png"
 run/quality/msaa_2d=0
 
@@ -34,7 +34,7 @@ window/handheld/orientation=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/InappReviewPlugin/plugin.cfg", "res://addons/admob/plugin.cfg")
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
 
 [global_group]
 

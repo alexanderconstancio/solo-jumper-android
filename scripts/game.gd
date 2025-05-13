@@ -14,7 +14,6 @@ var just_resumed = false
 @onready var map_building_node: Node2D = %MapBuildingNode
 @onready var start_press_audio: AudioStreamPlayer = $UISounds/start_press_audio
 @onready var button_press_audio: AudioStreamPlayer = $UISounds/button_press_audio
-@onready var inapp_review: InappReview = $InappReview
 @onready var starting_node: Node2D = %StartingNode
 
 @onready var gold_toilet: Area2D = $Gold_Toilet
@@ -60,7 +59,6 @@ func _ready() -> void:
 
 func _on_inapp_review_review_info_generated() -> void:
 	print("launching review flow")
-	inapp_review.launch_review_flow()
 	
 func finished_loading():
 	if onAppear:

@@ -1,29 +1,28 @@
-[gd_scene load_steps=96 format=3 uid="uid://dm4cjiigmnddu"]
+[gd_scene load_steps=95 format=3 uid="uid://dm4cjiigmnddu"]
 
 [ext_resource type="PackedScene" uid="uid://csl3it824f5gp" path="res://scenes/player.tscn" id="1_civ6m"]
-[ext_resource type="Script" uid="uid://yt2wyq5r51we" path="res://scripts/saver_loader.gd" id="1_o8b0o"]
-[ext_resource type="Script" uid="uid://b0h1i64ee1yh4" path="res://scripts/game.gd" id="1_tjb6c"]
-[ext_resource type="Script" uid="uid://duwfcmkoh5uxv" path="res://scripts/joystick.gd" id="4_l35t7"]
+[ext_resource type="Script" path="res://scripts/saver_loader.gd" id="1_o8b0o"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_tjb6c"]
+[ext_resource type="Script" path="res://scripts/joystick.gd" id="4_l35t7"]
 [ext_resource type="Texture2D" uid="uid://buella211npqy" path="res://assets/sprites/controller button 54.png" id="9_e1j6l"]
-[ext_resource type="Script" uid="uid://bytq8k6bnli1a" path="res://scripts/bat.gd" id="9_ftf0j"]
+[ext_resource type="Script" path="res://scripts/bat.gd" id="9_ftf0j"]
 [ext_resource type="Texture2D" uid="uid://c6oig0lioo13v" path="res://assets/sprites/bat-sheet.png" id="9_y4twx"]
 [ext_resource type="Texture2D" uid="uid://b1vb8ijxqcw8m" path="res://assets/sprites/key_pad_idle.png" id="10_pwl1p"]
-[ext_resource type="Script" uid="uid://cr64jnpnj78s7" path="res://scripts/bat_2.gd" id="10_qwsym"]
+[ext_resource type="Script" path="res://scripts/bat_2.gd" id="10_qwsym"]
 [ext_resource type="Texture2D" uid="uid://dylb1iadrjqv5" path="res://assets/sprites/jump_white.png" id="12_pl11u"]
 [ext_resource type="Texture2D" uid="uid://b3thm7npxyfcy" path="res://assets/sprites/vulture-idle.png" id="12_qv41g"]
-[ext_resource type="Script" uid="uid://daybxhlssynea" path="res://scripts/vulture.gd" id="12_x7f2q"]
+[ext_resource type="Script" path="res://scripts/vulture.gd" id="12_x7f2q"]
 [ext_resource type="Texture2D" uid="uid://bfq63rmntrlym" path="res://assets/sprites/jump_white_pressed.png" id="13_bhx41"]
 [ext_resource type="FontFile" uid="uid://ud8g5ipuqwpr" path="res://assets/fonts/Valorax-lg25V.otf" id="15_e1j6l"]
 [ext_resource type="Texture2D" uid="uid://dcl2sr55q4svb" path="res://assets/sprites/Sweet n Juicy Spritesheet 32x32.png" id="19_k5le1"]
-[ext_resource type="Script" uid="uid://bbtj6l1kvuyc5" path="res://scripts/map_root.gd" id="20_bhx41"]
+[ext_resource type="Script" path="res://scripts/map_root.gd" id="20_bhx41"]
 [ext_resource type="PackedScene" uid="uid://rjjwsevow8mc" path="res://scenes/alien_forest_cave.tscn" id="20_suyxu"]
-[ext_resource type="Script" uid="uid://c7kqtcehbvbkw" path="res://scripts/margin_container.gd" id="21_cdbbm"]
+[ext_resource type="Script" path="res://scripts/margin_container.gd" id="21_cdbbm"]
 [ext_resource type="PackedScene" uid="uid://3362n8ykf13o" path="res://scenes/new_life.tscn" id="26_6jtkn"]
 [ext_resource type="PackedScene" uid="uid://bqp76ceykg28s" path="res://scenes/loadingScreen.tscn" id="27_qnb83"]
 [ext_resource type="Texture2D" uid="uid://cmp6ml242fh2a" path="res://assets/sprites/gold_toilet_spritesheet.png" id="55_q8j3a"]
-[ext_resource type="Script" uid="uid://byivgonyjh87x" path="res://addons/InappReviewPlugin/InappReview.gd" id="56_ms3bu"]
 [ext_resource type="PackedScene" uid="uid://bmnsgvtq3elku" path="res://scenes/super_life.tscn" id="58_yd4ix"]
-[ext_resource type="Script" uid="uid://db78r28foopwk" path="res://scripts/gold_toilet.gd" id="59_66xif"]
+[ext_resource type="Script" path="res://scripts/gold_toilet.gd" id="59_66xif"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2gvqb"]
 atlas = ExtResource("9_y4twx")
@@ -641,8 +640,8 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 focus_mode = 0
-theme_override_colors/font_outline_color = Color(0.027451, 0.0627451, 0.133333, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.027451, 0.0627451, 0.133333, 1)
 theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("15_e1j6l")
 theme_override_font_sizes/font_size = 40
@@ -836,9 +835,6 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 process_mode = 3
 volume_db = -15.0
 bus = &"UI Elements"
-
-[node name="InappReview" type="Node" parent="."]
-script = ExtResource("56_ms3bu")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("27_qnb83")]
 visible = false
