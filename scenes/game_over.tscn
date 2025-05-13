@@ -1,0 +1,359 @@
+[gd_scene load_steps=32 format=3 uid="uid://bqrbli477i1pc"]
+
+[ext_resource type="Script" uid="uid://cenqqmkp82gd4" path="res://scripts/game_over.gd" id="1_d0sa1"]
+[ext_resource type="Texture2D" uid="uid://bxgnc1jmuspyg" path="res://assets/sprites/game_over.png" id="2_7m3ot"]
+[ext_resource type="FontFile" uid="uid://cqlp4g6ekqvdk" path="res://assets/sprites/visitor2.ttf" id="2_ef6hw"]
+[ext_resource type="FontFile" uid="uid://b16l0yidu43nl" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_2aj2q"]
+[ext_resource type="Texture2D" uid="uid://dcl2sr55q4svb" path="res://assets/sprites/Sweet n Juicy Spritesheet 32x32.png" id="4_0haov"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yatjq"]
+bg_color = Color(0, 0, 0, 0.517647)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8fm7"]
+bg_color = Color(0, 0.00392157, 0.203922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.87, 0.87, 0.87, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vho4"]
+bg_color = Color(0, 0, 0.203922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0470588, 0.752941, 0.87451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekf6a"]
+atlas = ExtResource("4_0haov")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8n7v"]
+atlas = ExtResource("4_0haov")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquhe"]
+atlas = ExtResource("4_0haov")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur74h"]
+atlas = ExtResource("4_0haov")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jovc4"]
+atlas = ExtResource("4_0haov")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h16yb"]
+atlas = ExtResource("4_0haov")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0tnx"]
+atlas = ExtResource("4_0haov")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s00uh"]
+atlas = ExtResource("4_0haov")
+region = Rect2(224, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubgam"]
+atlas = ExtResource("4_0haov")
+region = Rect2(256, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk32r"]
+atlas = ExtResource("4_0haov")
+region = Rect2(288, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olsrj"]
+atlas = ExtResource("4_0haov")
+region = Rect2(320, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23drk"]
+atlas = ExtResource("4_0haov")
+region = Rect2(352, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fehrj"]
+atlas = ExtResource("4_0haov")
+region = Rect2(384, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5e5q"]
+atlas = ExtResource("4_0haov")
+region = Rect2(416, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p071c"]
+atlas = ExtResource("4_0haov")
+region = Rect2(448, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfvj3"]
+atlas = ExtResource("4_0haov")
+region = Rect2(480, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_objoi"]
+atlas = ExtResource("4_0haov")
+region = Rect2(512, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iub5c"]
+atlas = ExtResource("4_0haov")
+region = Rect2(544, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk05x"]
+atlas = ExtResource("4_0haov")
+region = Rect2(576, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dntrr"]
+atlas = ExtResource("4_0haov")
+region = Rect2(608, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpgu4"]
+atlas = ExtResource("4_0haov")
+region = Rect2(640, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg27t"]
+atlas = ExtResource("4_0haov")
+region = Rect2(672, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wxt5e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekf6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8n7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur74h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jovc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h16yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0tnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s00uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubgam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk32r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olsrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23drk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fehrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5e5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p071c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfvj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_objoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iub5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk05x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dntrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpgu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg27t")
+}],
+"loop": true,
+"name": &"gain",
+"speed": 12.0
+}]
+
+[node name="GameOver" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_d0sa1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yatjq")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.5
+offset_top = -484.5
+offset_right = 251.5
+offset_bottom = 484.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(400, 225)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_7m3ot")
+expand_mode = 1
+
+[node name="Score" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m8fm7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/Score"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+
+[node name="game_stats" type="Label" parent="Control/VBoxContainer/Score/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2aj2q")
+theme_override_font_sizes/font_size = 23
+text = "GAME STATS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="jumps" type="Label" parent="Control/VBoxContainer/Score/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2aj2q")
+text = "JUMPS MADE: 322"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="highest" type="Label" parent="Control/VBoxContainer/Score/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.827451, 0.623529, 1)
+theme_override_fonts/font = ExtResource("3_2aj2q")
+text = "HIGHEST POINT: 1524 FT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="high_score" type="Label" parent="Control/VBoxContainer/Score/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.654902, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_2aj2q")
+theme_override_font_sizes/font_size = 22
+text = "HIGH SCORE: 2514 FT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Feedback" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m8fm7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/Feedback"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 26.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+
+[node name="Support" type="Label" parent="Control/VBoxContainer/Feedback/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2aj2q")
+theme_override_font_sizes/font_size = 18
+text = "FEEDBACK?
+
+Have ideas to 
+make the game better? 
+Leave us feedback 
+or suggestions on the
+app store!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="more_life" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.87, 0.87, 0.87, 1)
+theme_override_fonts/font = ExtResource("2_ef6hw")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vho4")
+text = "Watch ad +1   "
+expand_icon = true
+
+[node name="heart" type="AnimatedSprite2D" parent="Control/VBoxContainer/more_life"]
+position = Vector2(346, 30)
+scale = Vector2(1.28125, 1.28125)
+sprite_frames = SubResource("SpriteFrames_wxt5e")
+animation = &"gain"
+autoplay = "gain"
+frame_progress = 0.978037
+centered = false
+
+[node name="Restart" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.87, 0.87, 0.87, 1)
+theme_override_fonts/font = ExtResource("2_ef6hw")
+theme_override_font_sizes/font_size = 53
+theme_override_styles/focus = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vho4")
+text = "Try again?"
+expand_icon = true
+
+[connection signal="pressed" from="Control/VBoxContainer/more_life" to="." method="_on_more_life_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Restart" to="." method="_restart_pressed"]

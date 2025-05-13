@@ -1,0 +1,143 @@
+[gd_scene load_steps=7 format=3 uid="uid://xaexhdb8dnk3"]
+
+[ext_resource type="Script" uid="uid://bmy6y6vpe4xyi" path="res://scripts/you_win.gd" id="1_qxwg1"]
+[ext_resource type="Texture2D" uid="uid://7okp0p4i0q1n" path="res://assets/sprites/you_win.png" id="2_nw31f"]
+[ext_resource type="FontFile" uid="uid://b16l0yidu43nl" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_077re"]
+[ext_resource type="FontFile" uid="uid://cqlp4g6ekqvdk" path="res://assets/sprites/visitor2.ttf" id="4_rfojx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yatjq"]
+bg_color = Color(0, 0, 0, 0.517647)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vho4"]
+bg_color = Color(0.564706, 0.329412, 0.00784314, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.996078, 0.847059, 0.188235, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="YouWin" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_qxwg1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yatjq")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -285.5
+offset_top = -480.0
+offset_right = 285.5
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_nw31f")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8vho4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Legend" type="Label" parent="Control/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_077re")
+theme_override_font_sizes/font_size = 17
+text = "You've reached the 
+Golden Toilet.
+
+All that jumping, for this?
+
+Legend says... those who sit here,
+ascend."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8vho4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="leave review" type="Label" parent="Control/VBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.827451, 0.623529, 1)
+theme_override_fonts/font = ExtResource("3_077re")
+theme_override_font_sizes/font_size = 20
+text = "Enjoyed Solo Jumper?
+Leave a review.
+It fuels the devs.
+
+Also…
+More levels are coming.
+We can’t stop. 
+The toilet won’t let us."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="new game" type="Button" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.87, 0.87, 0.87, 1)
+theme_override_fonts/font = ExtResource("4_rfojx")
+theme_override_font_sizes/font_size = 53
+theme_override_styles/focus = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8vho4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vho4")
+text = "New Game"
+expand_icon = true
+
+[connection signal="pressed" from="Control/VBoxContainer/new game" to="." method="_on_new_game_pressed"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://b73epmhce3uw0"]
+
+[ext_resource type="Texture2D" uid="uid://thkkwapwbs0t" path="res://assets/sprites (2)/JoystickSplitted.png" id="1_bthep"]
+[ext_resource type="Script" uid="uid://duwfcmkoh5uxv" path="res://scripts/joystick.gd" id="2_w32fu"]
+[ext_resource type="Texture2D" uid="uid://esrd1numjfq0" path="res://assets/sprites/SmallHandleFilled.png" id="3_lhs6y"]
+[ext_resource type="Texture2D" uid="uid://dlshf1bhy2tne" path="res://assets/sprites (2)/Abutton.png" id="4_7vc28"]
+[ext_resource type="Texture2D" uid="uid://fd1c0dv5jub" path="res://assets/sprites (2)/AbuttonPressed2.png" id="5_rpyn4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wjfe5"]
+radius = 150.0
+
+[node name="ControlLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 984.0
+offset_right = 719.0
+offset_bottom = 1278.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Joystick" type="TouchScreenButton" parent="."]
+position = Vector2(66, 995)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_bthep")
+shape = SubResource("CircleShape2D_wjfe5")
+script = ExtResource("2_w32fu")
+
+[node name="Knob" type="Sprite2D" parent="Joystick"]
+position = Vector2(178, 178)
+texture = ExtResource("3_lhs6y")
+
+[node name="JumpButton" type="TouchScreenButton" parent="."]
+position = Vector2(493, 1017)
+scale = Vector2(10.9231, 10.1142)
+texture_normal = ExtResource("4_7vc28")
+texture_pressed = ExtResource("5_rpyn4")

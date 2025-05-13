@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://bqp76ceykg28s"]
+
+[ext_resource type="Texture2D" uid="uid://co2ewsjwug2lt" path="res://assets/sprites/PlayerSheet.png" id="1_jl4l0"]
+[ext_resource type="Texture2D" uid="uid://ti25knj1doao" path="res://assets/sprites/ChatGPT Image Apr 23, 2025 at 05_19_32 PM.png" id="2_l8g8h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa5t5"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(0, 178, 96, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6id7t"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(96, 178, 96, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voeqd"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(192, 178, 96, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo87s"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(288, 178, 96, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yulp8"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(384, 178, 96, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8yd3"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(480, 178, 96, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fa16"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(576, 178, 96, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvujh"]
+atlas = ExtResource("1_jl4l0")
+region = Rect2(672, 178, 96, 89)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ugp6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa5t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6id7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voeqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qo87s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yulp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8yd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fa16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvujh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1.50409e-09, 0.0313631, 0.0961323, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Control"]
+process_mode = 3
+position = Vector2(184, 73)
+scale = Vector2(2.11458, 2.14045)
+sprite_frames = SubResource("SpriteFrames_ugp6p")
+autoplay = "default"
+frame_progress = 0.0830507
+
+[node name="Logo" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_l8g8h")
+expand_mode = 1

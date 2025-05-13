@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cs7orm45iyl0b"
+path="res://.godot/imported/ES_Parallel Events - Curved Mirror.ogg-3428f695760ae449b934b90b9d5f6769.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/SciFi/ES_Parallel Events - Curved Mirror.ogg"
+dest_files=["res://.godot/imported/ES_Parallel Events - Curved Mirror.ogg-3428f695760ae449b934b90b9d5f6769.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

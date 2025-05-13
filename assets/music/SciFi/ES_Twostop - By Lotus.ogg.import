@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3hl6fm6b6lcy"
+path="res://.godot/imported/ES_Twostop - By Lotus.ogg-864a36cee6bad0e76e613e2f0853b089.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/SciFi/ES_Twostop - By Lotus.ogg"
+dest_files=["res://.godot/imported/ES_Twostop - By Lotus.ogg-864a36cee6bad0e76e613e2f0853b089.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

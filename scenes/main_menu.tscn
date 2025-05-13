@@ -1,0 +1,190 @@
+[gd_scene load_steps=6 format=3 uid="uid://com00rlvckof0"]
+
+[ext_resource type="Script" uid="uid://20se8xqvn4lq" path="res://scripts/main_menu.gd" id="1_w01vu"]
+[ext_resource type="FontFile" uid="uid://cqlp4g6ekqvdk" path="res://assets/sprites/visitor2.ttf" id="2_kygm8"]
+[ext_resource type="Texture2D" uid="uid://cpjv4l3xxpb68" path="res://assets/sprites/SoloJumperLogo.png" id="3_bqqt6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6aru"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 0.756863)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5dmx"]
+bg_color = Color(0, 0, 0.203922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0470588, 0.752941, 0.87451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_w01vu")
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m6aru")
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="VBoxContainer" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -105.0
+offset_right = 239.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+alignment = 1
+
+[node name="Start" type="Button" parent="MainMenu/Start"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.87, 0.87, 0.87, 1)
+theme_override_fonts/font = ExtResource("2_kygm8")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5dmx")
+text = "Start"
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="coming soon" type="Label" parent="MainMenu/Start"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.573451, 0.948486, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.203922, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_kygm8")
+theme_override_font_sizes/font_size = 39
+text = "Level 2 coming soon..."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="can_you_do_it2" type="Label" parent="MainMenu/Start"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0.203922, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_kygm8")
+theme_override_font_sizes/font_size = 39
+text = "Legends speak of a 
+throne at the summit...
+Forged in gold."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -262.0
+offset_right = 200.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Policy" type="VBoxContainer" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Privacy" type="Button" parent="MainMenu/VBoxContainer/Policy"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_kygm8")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/focus = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5dmx")
+text = "Privacy Policy"
+metadata/_edit_use_anchors_ = true
+
+[node name="EULA" type="Button" parent="MainMenu/VBoxContainer/Policy"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_kygm8")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/focus = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5dmx")
+text = "EULA"
+metadata/_edit_use_anchors_ = true
+
+[node name="credits" type="VBoxContainer" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Credits" type="Button" parent="MainMenu/VBoxContainer/credits"]
+custom_minimum_size = Vector2(100, 59)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_kygm8")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/focus = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g5dmx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5dmx")
+text = "Credits"
+metadata/_edit_use_anchors_ = true
+
+[node name="created_by" type="Label" parent="MainMenu/VBoxContainer/credits"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0.203922, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_kygm8")
+theme_override_font_sizes/font_size = 28
+text = "Created By 
+Alex Constancio"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Logo" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.277
+anchor_right = 0.5
+anchor_bottom = 0.277
+offset_left = -201.0
+offset_top = -201.56
+offset_right = 198.0
+offset_bottom = 198.44
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bqqt6")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="pressed" from="MainMenu/Start/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Policy/Privacy" to="." method="_on_privacy_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Policy/EULA" to="." method="_on_eula_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/credits/Credits" to="." method="_on_credits_pressed"]

@@ -1,0 +1,201 @@
+[gd_scene load_steps=14 format=3 uid="uid://sen00xeg0ssl"]
+
+[ext_resource type="Script" uid="uid://bpcrlg78e7fjs" path="res://scripts/pause_menu.gd" id="1_a7ebg"]
+[ext_resource type="FontFile" uid="uid://b16l0yidu43nl" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_27wtb"]
+[ext_resource type="Texture2D" uid="uid://bwa4tcvhfrjxt" path="res://assets/sprites/paused.png" id="2_v4r4p"]
+[ext_resource type="Texture2D" uid="uid://2w5lgwbumpa7" path="res://assets/sprites/music.png" id="3_1erw8"]
+[ext_resource type="Texture2D" uid="uid://bbgdb6mno3usp" path="res://assets/sprites/unmute.png" id="4_l1n1x"]
+[ext_resource type="FontFile" uid="uid://cqlp4g6ekqvdk" path="res://assets/sprites/visitor2.ttf" id="4_v4r4p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cglx"]
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.760784)
+
+[sub_resource type="ImageTexture" id="ImageTexture_vk75a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdm6k"]
+content_margin_left = 1.0
+content_margin_top = 12.0
+content_margin_right = 1.0
+content_margin_bottom = 12.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_us7r3"]
+bg_color = Color(0.0470588, 0.752941, 0.87451, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yavhj"]
+bg_color = Color(0.0470588, 0.752941, 0.87451, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs3yi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rfa5"]
+bg_color = Color(0, 0, 0.203922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0470588, 0.752941, 0.87451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_a7ebg")
+
+[node name="PauseMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8cglx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.0
+offset_top = -103.5
+offset_right = 183.0
+offset_bottom = 103.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.01038, 1.0028)
+theme_override_constants/separation = 42
+
+[node name="Logo" type="TextureRect" parent="PauseMenu/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(400, 125)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_v4r4p")
+expand_mode = 1
+
+[node name="PauseLabel" type="Label" parent="PauseMenu/Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_27wtb")
+theme_override_font_sizes/font_size = 74
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MusicVolume" type="Label" parent="PauseMenu/Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("4_v4r4p")
+theme_override_font_sizes/font_size = 43
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="SliderContainer" type="HBoxContainer" parent="PauseMenu/Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="MuteMusicButton" type="Button" parent="PauseMenu/Panel/VBoxContainer/VBoxContainer/SliderContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+icon = ExtResource("3_1erw8")
+flat = true
+expand_icon = true
+
+[node name="MusicMasterSlider" type="HSlider" parent="PauseMenu/Panel/VBoxContainer/VBoxContainer/SliderContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_icons/grabber = SubResource("ImageTexture_vk75a")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_vk75a")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_vk75a")
+theme_override_icons/tick = SubResource("ImageTexture_vk75a")
+theme_override_styles/slider = SubResource("StyleBoxFlat_cdm6k")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_us7r3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yavhj")
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="PlayerSounds" type="Label" parent="PauseMenu/Panel/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("4_v4r4p")
+theme_override_font_sizes/font_size = 43
+text = "Player SFX"
+horizontal_alignment = 1
+
+[node name="PlayerSoundContainer" type="HBoxContainer" parent="PauseMenu/Panel/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 19
+
+[node name="MutePlayerSound" type="Button" parent="PauseMenu/Panel/VBoxContainer/VBoxContainer2/PlayerSoundContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/icon_max_width = 0
+theme_override_styles/focus = SubResource("StyleBoxFlat_fs3yi")
+icon = ExtResource("4_l1n1x")
+flat = true
+expand_icon = true
+
+[node name="saved" type="Label" parent="PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.572549, 0.94902, 1, 1)
+theme_override_fonts/font = ExtResource("4_v4r4p")
+theme_override_font_sizes/font_size = 43
+text = "* GAME PROGRESS
+IS SAVED AS YOU PLAY"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="PauseMenu/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_v4r4p")
+theme_override_font_sizes/font_size = 62
+theme_override_styles/focus = SubResource("StyleBoxFlat_0rfa5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0rfa5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0rfa5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0rfa5")
+text = "RESUME"
+
+[connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/VBoxContainer/SliderContainer/MuteMusicButton" to="." method="_on_mute_music_button_pressed"]
+[connection signal="value_changed" from="PauseMenu/Panel/VBoxContainer/VBoxContainer/SliderContainer/MusicMasterSlider" to="." method="_on_music_master_slider_value_changed"]
+[connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/VBoxContainer2/PlayerSoundContainer/MutePlayerSound" to="." method="_on_mute_player_sound_pressed"]
+[connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

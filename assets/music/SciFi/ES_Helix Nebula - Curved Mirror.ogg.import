@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cy80wgqquk58p"
+path="res://.godot/imported/ES_Helix Nebula - Curved Mirror.ogg-74e5955715e7cfa77d7a13f2ad815db0.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/SciFi/ES_Helix Nebula - Curved Mirror.ogg"
+dest_files=["res://.godot/imported/ES_Helix Nebula - Curved Mirror.ogg-74e5955715e7cfa77d7a13f2ad815db0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

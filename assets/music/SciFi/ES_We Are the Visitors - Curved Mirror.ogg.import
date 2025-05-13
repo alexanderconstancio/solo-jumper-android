@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5dawb215ndxe"
+path="res://.godot/imported/ES_We Are the Visitors - Curved Mirror.ogg-95bfb67419a0a46941a9276258623be4.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/SciFi/ES_We Are the Visitors - Curved Mirror.ogg"
+dest_files=["res://.godot/imported/ES_We Are the Visitors - Curved Mirror.ogg-95bfb67419a0a46941a9276258623be4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,152 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyykso5uggyyo"]
+
+[ext_resource type="Script" uid="uid://dnh2ymr2ghndb" path="res://scripts/credits.gd" id="1_capit"]
+[ext_resource type="FontFile" uid="uid://cqlp4g6ekqvdk" path="res://assets/sprites/visitor2.ttf" id="2_8egh0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn2mi"]
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.760784)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pni6k"]
+bg_color = Color(0, 0, 0.203922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0470588, 0.752941, 0.87451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_capit")
+
+[node name="Credits" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mn2mi")
+
+[node name="back" type="Button" parent="Credits"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -211.0
+offset_right = 121.0
+offset_bottom = -126.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_8egh0")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pni6k")
+text = "Back
+"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 253.0
+offset_bottom = -255.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Credits/ScrollContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_8egh0")
+theme_override_font_sizes/font_size = 59
+text = "Privacy Policy for Solo Jumper
+
+Effective Date:
+
+[April 29, 2025]
+
+Solo Jumper (\"we,\" \"us,\" or \"our\") is operated by Alexander Constancio.
+Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information when you play Solo Jumper.
+
+If you have any questions about this Privacy Policy, please contact us at hey@alexbuilds.dev.
+
+1. Information We Collect
+
+Device Information: We may collect device identifiers (such as your device ID) through third-party services like Google AdMob to serve ads.
+Local Data: Solo Jumper stores gameplay information, such as scores, locally on your device. We do not store gameplay data on external servers.
+No Account Required: You are not required to create an account to play Solo Jumper.
+2. Third-Party Services
+
+We use Google AdMob to display ads in the game. Google AdMob may collect information such as device identifiers to provide and improve advertising services.
+Please review Google's Privacy Policy for more information about how they handle user data.
+
+We do not use any analytics tools or other third-party SDKs.
+
+3. Advertising and Tracking
+
+Solo Jumper integrates Google AdMob according to their official documentation.
+AdMob may serve personalized or non-personalized ads based on your device information. Cookies or similar technologies may be used by Google AdMob to personalize advertising content.
+You can learn more about Google's advertising practices and your choices by visiting Google's Ad Settings.
+
+4. Children's Privacy
+
+Solo Jumper is accessible to children under 13 and does not contain explicit content.
+We do not knowingly collect personal information from children under 13 beyond what is necessary to support internal operations, in compliance with the Children's Online Privacy Protection Act (COPPA).
+
+Parents or guardians who believe that their child has provided personal information can contact us at hey@alexbuilds.dev to request deletion.
+
+5. User Rights
+
+You have the right to request deletion of any personal information we have collected.
+If you would like to request deletion, please contact us at hey@alexbuilds.dev.
+
+6. Data Security
+
+We implement reasonable administrative, technical, and physical security measures to protect the data we collect from unauthorized access, use, or disclosure.
+
+However, no method of transmission over the internet or method of electronic storage is 100% secure.
+
+7. International Users (GDPR Notice)
+
+If you are located outside of the United States, please be aware that your information may be transferred to, stored, and processed in the United States or other countries.
+
+If you are a resident of the European Economic Area (EEA), you have the right to access, correct, or delete your personal information. You also have the right to object to or restrict certain types of processing.
+
+To exercise your rights, please contact us at hey@alexbuilds.dev.
+
+8. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time.
+If we make material changes, we will notify you through an in-game popup or other reasonable means before the changes take effect.
+
+Please review this Privacy Policy periodically for any updates.
+
+Contact Us
+
+If you have any questions or concerns about this Privacy Policy, please contact us at:
+Email: hey@alexbuilds.dev"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Credits/back" to="." method="_on_back_pressed"]

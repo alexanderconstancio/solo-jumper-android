@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SavedGame" load_steps=2 format=3 uid="uid://b6l8nrce133g"]
+
+[ext_resource type="Script" uid="uid://cub7creplkyfn" path="res://save_game/saved_game.gd" id="1_01unu"]
+
+[resource]
+script = ExtResource("1_01unu")
+player_position = Vector2(0, 0)
+player_lives = 0
+high_score = 0
+jumps_made = 0
+music_master_volume = 0.0
+player_sfx_volume = 0.0
+collected_hearts = []
+has_won_level_one = false

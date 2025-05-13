@@ -1,0 +1,146 @@
+[gd_scene load_steps=5 format=3 uid="uid://hcaxpw54j1kp"]
+
+[ext_resource type="Script" uid="uid://dnh2ymr2ghndb" path="res://scripts/credits.gd" id="1_wsbls"]
+[ext_resource type="FontFile" uid="uid://cqlp4g6ekqvdk" path="res://assets/sprites/visitor2.ttf" id="2_1waqo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn2mi"]
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.760784)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pni6k"]
+bg_color = Color(0, 0, 0.203922, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0470588, 0.752941, 0.87451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_wsbls")
+
+[node name="Credits" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mn2mi")
+
+[node name="back" type="Button" parent="Credits"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -211.0
+offset_right = 121.0
+offset_bottom = -126.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_1waqo")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/focus = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pni6k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pni6k")
+text = "Back
+"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 270.0
+offset_bottom = -255.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Credits/ScrollContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_1waqo")
+theme_override_font_sizes/font_size = 59
+text = "End-User License Agreement (EULA)
+
+Effective Date: 
+April 28, 2025
+Game: Solo Jumper
+Developer: Alexander Constancio
+
+1. Acceptance of Terms
+
+By downloading, installing, or using Solo Jumper, you agree to be bound by the terms of this End-User License Agreement (\"Agreement\").
+If you do not agree to these terms, do not download, install, or use the Game.
+
+2. License Grant
+
+Alexander Constancio grants you a limited, non-exclusive, non-transferable, revocable license to:
+
+Download, install, and use Solo Jumper for personal, non-commercial purposes, strictly in accordance with this Agreement.
+3. Restrictions
+
+You may not:
+
+Modify, reverse engineer, decompile, or disassemble Solo Jumper.
+Reproduce, distribute, publicly display, or resell the Game.
+Use the Game for any unlawful or unauthorized purpose.
+Remove, alter, or obscure any copyright, trademark, or other proprietary notices.
+4. Ownership
+
+Solo Jumper is licensed, not sold.
+All rights, title, and interest in and to the Game (including any updates, enhancements, and modifications) remain the exclusive property of Alexander Constancio.
+
+5. Updates
+
+Alexander Constancio may provide updates, patches, or improvements to Solo Jumper.
+Such updates will be governed by this Agreement unless accompanied by a separate license.
+
+6. Warranty Disclaimer
+
+Solo Jumper is provided \"as is\" without warranty of any kind.
+Alexander Constancio disclaims all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
+
+7. Limitation of Liability
+
+In no event shall Alexander Constancio be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of or inability to use Solo Jumper.
+
+8. Termination
+
+This Agreement is effective until terminated.
+You may terminate it at any time by deleting Solo Jumper from your device.
+Alexander Constancio may terminate this Agreement at any time if you breach its terms.
+
+9. Governing Law
+
+This Agreement shall be governed by and construed in accordance with the laws of Texas, USA, without regard to its conflict of law provisions.
+
+10. Contact
+
+If you have any questions or concerns regarding this Agreement, you may contact:
+
+Alexander Constancio
+Email: hey@alexBuilds.dev"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Credits/back" to="." method="_on_back_pressed"]
