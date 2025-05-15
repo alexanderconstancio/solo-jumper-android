@@ -222,9 +222,6 @@ func handle_land_show_ad():
 		land_count = 0
 		show_interstitial_ad.emit()
 	
-	if land_count_rate_app == 10:
-		game.inapp_review.launch_review_flow()
-	
 		
 func handle_move_mobile():
 	var keys_direction = Input.get_axis("move_left", "move_right")
