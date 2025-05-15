@@ -1,2 +1,4 @@
 res://scenes/game.tscn
+res://scripts/music.gd
+res://scripts/player.gd
 res://scripts/game.gd

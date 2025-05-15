@@ -21,7 +21,7 @@ var current_song_index = 0  # Track which song is playing
 func _ready() -> void:
 	player = AudioStreamPlayer.new()
 	player.bus = "Music"
-	player.volume_db = -30.0
+	player.volume_db = -20.0
 	player.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(player)
 	
